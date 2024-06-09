@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-screen w-screen bg-slate-900 text-white px-2 py-2" >
+        <a href="/displayUser"><h1 class=" text-3xl text-center text-red-600 rounded-md p-1">Go to display users Page </h1></a>
+        <div class="register-user flex justify-center mt-3">
+            <div class="register-form h-[550px] w-[800px]  p-2" >
+                <form action="/create-contact" method="post">
+                        <input type="text" name="name" placeholder="Enter name" class="w-[700px] border-white border-[1px] ml-11 p-3 bg-transparent border-white outline-none rounded-md mt-6" >
+                        <input type="email" name="email" placeholder="Enter email" class="w-[700px] border-white border-[1px] ml-11 p-3 bg-transparent border-white outline-none rounded-md mt-4" >
+                        <input type="password" name="password" placeholder="Enter password" class="w-[700px] border-white border-[1px] ml-11 p-3 bg-transparent border-white outline-none rounded-md mt-4 " >
+                        <input type="number" name="number" placeholder="Enter number" class="w-[700px] border-white border-[1px] ml-11 p-3 bg-transparent border-white outline-none rounded-md mt-4" >
+                        <input type="number" name="age" placeholder="Enter age" class="w-[700px] border-white border-[1px] ml-11 p-3 bg-transparent border-white outline-none rounded-md mt-4" >      
+                        <input type="submit" value="Add Contact User" class="bg-blue-800 w-[700px] ml-11 p-3 border-white outline-none rounded-md mt-4"  >
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

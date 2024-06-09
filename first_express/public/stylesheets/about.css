@@ -1,0 +1,74 @@
+
+/* import inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* root */
+:root {
+  --bg-light: #F5F5FC;
+  --bg-dark: #35353C;
+  --bg-darker: #15151C;
+  --font-body: #55555C;
+  --shadow: #C5C5CC;
+}
+
+/* demo related */
+body{
+  background: #FFF;
+  height:100%;
+  padding:10%;
+  font-family: "Inter", sans-serif;
+  color: var(--font-body);
+}
+
+.demo_title h1,h6{
+  color: var(--bg-darker);
+}
+
+#copyrights{
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}
+
+#copyrights a{
+  text-decoration: none;
+  color: var(--bg-darker);
+}
+
+/* tpn card style */
+.tpn_card{
+  background: var(--bg-light);
+  padding: 23px;
+  border-radius:27px;
+}
+
+.tpn_card img{
+  border-radius:23px;
+  box-shadow: 1px 7px 13px var(--shadow);
+}
+
+.tpn_card h5{
+  color: var(--bg-dark);
+}
+
+.tpn_card p{
+  color: var(--font-body);
+  font-weight:400;
+  margin-bottom:24px;
+}
+
+.tpn_card .tpn_btn{
+  padding:13px 27px !important;
+  line-height: normal;
+  background: var(--bg-dark);
+  border-radius:17px;
+  text-decoration:none;
+  color: #FFF;
+  box-shadow: 1px 7px 13px var(--shadow);
+  transition: all .7s ease;
+}
+
+.tpn_card .tpn_btn:hover{
+  background: var(--bg-darker);
+  box-shadow: none;
+}

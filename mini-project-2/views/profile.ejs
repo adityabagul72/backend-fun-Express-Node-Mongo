@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full bg-slate-900 " >
+    <div class="bg-slate-900 h-screen w-screen px-6 py-4 text-white"> 
+        <div class="flex justify-end">
+        <a class="text-white-500 bg-red-600 rounded-md px-1 py-1 text-sm inline-block mb-2" href="/logout">Logout</a>
+        </div>
+        <div>
+        <h1 class="text-3xl "><span class="text-green-500 " >Welcome, </span> <%= user.username %> 👋</h1></div> 
+        <h4 class="my-1 "> You can create post. </h4>
+        <form action="/post" method="post">
+            <textarea name="content" placeholder="What's On Your Mind ?"  class="px-1 text-white-500 py-1 px w-1/3 my-1 resize-none border-[2px] outline-none border-white-600 rounded-md bg-transparent"></textarea> <br>
+            <input type="submit" class="w-40 bg-blue-700 rounded-md p-2 border-white-600 " value="Create New Post">
+        </form>
+
+        <div class="posts mt-20 ">
+            <h3 class="text-zinc-200 mx-1" >Your Posts.</h3> <br>
+            <div class="postcontainer flex flex-wrap">
+                <% user.posts.reverse().forEach((post)=>{ %>
+                    <div class="post m-1 w-[400px] bg-slate-800 p-3 border-2 border-slate-800 rounded-md">
+                        <h4 class="text-blue-600 mb-2" ><%= user.username %></h4>
+                        <p> <%= post.content %></p>
+                        <div class="btns flex mt-3 gap-4 ">
+                            <a class="text-blue-600 m-1" href=""> Like</a>
+                            <a class="text-zinc-400" href="">Edit</a>
+                        </div>
+                    </div>
+                <% }) %>
+                
+                
+                
+            </div>
+        </div>
+
+        </div>
+</body>
+</html>

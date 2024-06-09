@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-full w-screen bg-slate-900 text-white px-2 py-2" >
+        <h1 class="text-3xl text-center text-yellow-600 rounded-md p-1">Manage Contacts.👩</h1>
+
+        <div class="register-user flex justify-center mt-3">
+            <div class="register-form h-[550px] w-[800px]  p-2" >
+                <form action="/register" method="post">
+                    <h2 class="text-center text-white text-2xl">Register User</h2>
+                        <input type="text" name="name" placeholder="Enter name" class="w-[700px] border-white border-[1px] ml-11 p-3 bg-transparent border-white outline-none rounded-md mt-6" >
+                        <input type="email" name="email" placeholder="Enter email" class="w-[700px] border-white border-[1px] ml-11 p-3 bg-transparent border-white outline-none rounded-md mt-4" >
+                        <input type="password" name="password" placeholder="Enter password" class="w-[700px] border-white border-[1px] ml-11 p-3 bg-transparent border-white outline-none rounded-md mt-4 " >
+                        <input type="number" name="number" placeholder="Enter number" class="w-[700px] border-white border-[1px] ml-11 p-3 bg-transparent border-white outline-none rounded-md mt-4" >
+                        <input type="submit" value="Register Accout" class="bg-blue-800 w-[700px] ml-11 p-3 border-white outline-none rounded-md mt-4"  >
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

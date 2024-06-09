@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-screen w-screen bg-slate-900 text-white px-2 py-2 flex justify-center " >
+<div class="users-table " >
+    <div class=" text-red-600"> <a href="/createUser">link to Create Users Page </a> </div>
+    <h1 class="text-2xl mb-5" >There are total <%=contactUser.length%> Users in database  </h1>
+<table class="border-2 border-white " >
+    <thead>
+        <tr class=" border-2  border-white" >
+            <th class=" text-2xl p-2 border-2 text-center border-white"> Users unique ids </th>
+            <th class=" text-2xl p-2 border-2 text-center border-white">Name </th>
+            <th class=" text-2xl p-2 border-2 text-center border-white">Email</th>
+            <th class=" text-2xl p-2 border-2 text-center border-white">Password</th>
+            <th class=" text-2xl p-2 border-2 text-center border-white">Phone Number </th>
+            <th class=" text-2xl p-2 border-2 text-center border-white">Age</th>
+            <th class=" text-2xl p-2 border-2 text-center border-white">edit/delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% contactUser.forEach((user)=>{ %>
+            <tr class="border-2  border-white">
+                <td class="border-2 text-xl p-1 text-center border-white" ><%= user._id%> </td>
+                <td class="border-2 text-xl p-1 text-center border-white" ><%= user.name %> </td>
+                <td class="border-2 text-xl p-1 text-center border-white" ><%= user.email %></td>
+                <td class="border-2 text-xl p-1 text-center border-white" ><%= user.password %></td>
+                <td class="border-2 text-xl p-1 text-center border-white" ><%= user.number %></td>
+                <td class="border-2 text-xl p-1 text-center border-white" ><%= user.age %></td>
+                <td class="border-2 text-xl p-1 text-center border-white" >
+                <a href="/edit/<%=user._id%>"><button class="bg-red-600 p-1 rounded ">edit</button></a> <a href="/delete/<%=user._id%>"><button class="bg-green-600 p-1 rounded ">delete</button></a>  </td>
+                </tr>
+        <%})%>
+            
+            
+    </tbody>
+</table>
+</div>
+
+</div>
+</body>
+</html>
+

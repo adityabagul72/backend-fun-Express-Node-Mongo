@@ -1,0 +1,258 @@
+
+body {
+  padding: 0;
+  margin: 0;
+  height: auto;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#container {
+  height: auto;
+}
+
+#content {
+  transition: font-size 0.2s ease;
+  position: relative;
+  height: 150vh;
+  background: linear-gradient(#111, #000);
+  color: white;
+  top: 0;
+  clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+}
+
+#content h2 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) translateZ(0);
+  width: 75%;
+  height: auto;
+  transition: transform 0.1s;
+  backface-visibility: hidden;
+}
+
+#main {
+  top: 5vh;
+  height: auto;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  background: transparent;
+  border: 2px solid black;
+  margin: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+.card-right::after {
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  display: block;
+  left: 0;
+  top: 0;
+  border-top: 1em solid black;
+  border-right: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-left: 1em solid black;
+}
+
+.card-left::after {
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  display: block;
+  right: 0;
+  top: 0;
+  border-top: 1em solid black;
+  border-right: 1em solid black;
+  border-bottom: 1em solid transparent;
+  border-left: 1em solid transparent;
+}
+
+.button-group {
+  display: flex;
+  width: 100%;
+  left: 0;
+  top: 0;
+  justify-content: space-around;
+  border-radius: 2em;
+}
+
+.button-group button {
+  margin: 0.5em;
+  background: transparent;
+  transition: transform 0.1s;
+  backface-visibility: hidden;
+  border: 1px solid black;
+  padding: 0.5em 1.5em;
+  box-shadow: 0 0 0px 4px white, 0 0 1px 5px black;
+}
+
+.button-group button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.custom-hr {
+  width: 50%;
+  border: 1px solid black;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.custom-hr-2 {
+  width: 35%;
+  border: 1px solid black;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.custom-hr-3 {
+  width: 20%;
+  border: 1px solid black;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#navigation {
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  box-shadow: -1px 0 10px #111;
+  background: black;
+  padding: 0.3em;
+  color: white;
+}
+
+#options {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#svg-flex {
+  display: flex;
+}
+
+#options #texts {
+  display: flex;
+}
+
+#options #texts p {
+  margin: 0.5em 1em;
+  flex-grow: 2;
+  display: flex;
+  text-align: right;
+}
+
+#options #texts p:hover {
+  cursor: pointer;
+}
+
+.widget {
+  min-width: 120px;
+  min-height: 150px;
+  max-width: 250px;
+  width: auto;
+  height: auto;
+  background: #f9f9f9;
+  position: relative;
+  box-shadow: 0 0 9px #444;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  transition: transform 0.2s;
+}
+
+.widget-container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+  margin: 1em;
+  flex-wrap: wrap;
+}
+
+.widget::after {
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  display: block;
+  right: -0.35em;
+  top: -0.35em;
+  border-top: 0.7em solid black;
+  border-right: 0.7em solid black;
+  border-bottom: 0.7em solid transparent;
+  border-left: 0.7em solid transparent;
+}
+
+.widget::before {
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  display: block;
+  left: -0.35em;
+  bottom: -0.35em;
+  border-top: 0.7em solid transparent;
+  border-right: 0.7em solid transparent;
+  border-bottom: 0.7em solid black;
+  border-left: 0.7em solid black;
+}
+
+.widget-image {
+  position: relative;
+  width: 200px;
+  height: auto;
+  min-height: 100px;
+  margin: 1em;
+  background: white;
+  border: 1px solid black;
+}
+
+.widget-title {
+  margin: 0.5em 1em;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.widget-text {
+  margin: 0.5em 1em;
+  text-align: center;
+}
+
+.widget-hr {
+  width: auto;
+  margin: 0 1em;
+  border: 1px solid black;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: relative;
+  display: block;
+}
+
+.widget:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
