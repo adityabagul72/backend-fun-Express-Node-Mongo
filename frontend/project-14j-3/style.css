@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: aliceblue;
+}
+#main{
+    height: 100%;
+    width: 100%;
+}
+#nav{
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+#nav h3{
+    font-weight: 300;
+}
+#nav-part1{
+    width: 40%;
+    display: flex;
+    justify-content:space-between;
+}
+#nav-part2{
+    display: flex;
+    gap:30px;
+}
+#name{
+    margin-top: 20px;
+    padding: 0 40px;
+    font-weight: 400;
+}
+#intro{
+    margin-top: 20px;
+    padding: 0 40px;
+    font-size: 122px;
+    font-weight: 400;
+    line-height: 125px;
+    letter-spacing: -5px;
+    word-spacing: 10px;
+}
+#case{
+    display: flex;
+    justify-content: space-between;
+    padding:30px 40px ;
+    margin-top: 50px;
+}
+
+#line{
+    border: 2px solid black;
+    height: 0.1px;
+    width: 80px;
+}
+#case-part2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#case-part2 h4{
+    margin-left: 25px;
+}
+#case h4{
+    font-weight: 400;
+}
+#products-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 30px 40px;
+    gap: 10px;
+}
+#product1{
+    background-image: url(https://images.unsplash.com/photo-1717866546279-55dca04f5479?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    /* background-color: red; */
+    height: 100%;
+    width: 50%;
+    border-radius: 50px;
+}
+#product2{
+    background-image: url(https://images.unsplash.com/photo-1718046254335-d9ff832c9c3c?q=80&w=1285&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: bottom;
+    background-color: aqua;
+    height: 100%;
+    width: 50%;
+    border-radius: 50px;
+}
+
+#product1-section{
+    padding: 0 10px;
+    position: relative;
+    top: 103%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#product1-section i{
+    font-size: 24px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+#product2-section{
+    padding: 0 10px;
+    position: relative;
+    top: 103%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#product2-section i{
+    color: white;
+    background-color: black;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 50px;
+}

@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+/* h1{
+    border: 2px solid black ;
+    font-size: 7vw;
+} */
+/* #main{
+    font-size: 20px;
+}
+#main1{
+    font-size: 1em;
+}
+#main2{
+    font-size: 1.5em;
+}
+#main3{
+    font-size: 1em;
+}
+*/
+
+/* #main{
+    font-size: 2rem;
+} */
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 50%;
+    
+}
+@media (max-width:600px){
+    #box{
+        height: 100px;
+        width: 100px;
+        background-color: green;
+        border : 2px solid dashed;
+        border-radius: 50%;
+    }
+}
+
+/* 
+#main1{
+    border: 2px black solid ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+}
+
+#main2{
+    border: 2px black solid ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    background-color: green;
+}
+#main3{
+    border: 2px black solid ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    background-color: red;
+} */
+
+@media (max-width:600px){
+    
+}

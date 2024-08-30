@@ -1,0 +1,85 @@
+<!-- views/products.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Include Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add custom font to Tailwind CSS */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-white">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Filter Form -->
+        <div class="bg-slate-900 rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">Filter Products by Price</h2>
+            <form method="GET" action="/products" class="flex items-center space-x-4">
+                <div class="flex-1">
+                    <label for="minPrice" class="block text-sm font-medium mb-1">Min Price</label>
+                    <input type="number" name="minPrice" id="minPrice"
+                        class="block w-full rounded-md bg-slate-700 border-white shadow-sm text-white focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 px-4 py-2"
+                        placeholder="Min">
+                </div>
+                <div class="flex-1">
+                    <label for="maxPrice" class="block text-sm font-medium mb-1">Max Price</label>
+                    <input type="number" name="maxPrice" id="maxPrice"
+                        class="block w-full rounded-md bg-slate-700 border-white shadow-sm text-white focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 px-4 py-2"
+                        placeholder="Max">
+                </div>
+                <div class="flex-none">
+                    <button type="submit"
+                        class="mt-6 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-200">Filter</button>
+                </div>
+            </form>
+        </div>
+
+
+
+
+        <!-- Products Display -->
+        <div class="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-4">
+            <% products.forEach(product=> { %>
+                <div class="bg-slate-900 border-white border border-blue-500 rounded-lg shadow-md p-4">
+                    <img src="<%= product.imageUrl %>" alt="<%= product.name %>"
+                        class="w-full h-40 object-cover mb-2 rounded-lg">
+                    <h2 class="text-xl font-bold mb-1">
+                        <%= product.name %>
+                    </h2>
+                    <p class="text-gray-300 mb-2">
+                        <%= product.description %>
+                    </p>
+                    <p class="text-blue-400 font-bold">$<%= product.price %>
+                    </p>
+                </div>
+                <% }) %>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-8">
+            <nav class="flex justify-center">
+                <ul class="inline-flex items-center">
+                    <% for(let i=1; i <=pages; i++) { %>
+                        <li>
+                            <a href="?page=<%= i %>&minPrice=<%= minPrice %>&maxPrice=<%= maxPrice %>"
+                                class="px-3 py-2 mx-1 text-sm font-medium text-gray-300 bg-slate-700 rounded-md shadow hover:bg-slate-600 <%= current === i ? 'bg-blue-600' : '' %>">
+                                <%= i %>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>
