@@ -1,4 +1,0 @@
-function isPallindrome(value){
-    
-}
-isPallindrome()
