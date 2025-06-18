@@ -12,6 +12,7 @@ app.get('/' , function (req,res){
     res.cookie("token" , token)
     res.send("working")
 })
+
 app.get('/verify' ,function (req,res){
     var verified = jwt.verify(req.cookies.token, "secret")
     console.log(verified)

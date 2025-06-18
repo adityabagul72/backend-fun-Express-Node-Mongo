@@ -6,6 +6,7 @@ const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
 let output =''
 app.post('/api/generate-content', async (req,res)=>{
